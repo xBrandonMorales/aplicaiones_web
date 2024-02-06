@@ -1,15 +1,18 @@
 import web
 
 urls = (
-    '/(.*)', 'hello'
+    "/", "hello",
+    "/pagina2", "pagina2"
 )
 app = web.application(urls, globals())
 
 class hello:
-    def GET(self, name):
-        if not name:
-            name = 'Mundito chido'
-        return 'Hola, ' + name + '!'
+    def GET(self):
+        return 'Hola pagina 1!'
+
+class pagina2:
+    def GET(self):
+        return "Hola pagina 2!"
 
 if __name__ == "__main__":
     app.run()
