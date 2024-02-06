@@ -3,12 +3,13 @@ import web
 urls = (
     "/", "hello",
     "/pagina2", "pagina2"
+    "/",
 )
 app = web.application(urls, globals())
 
 class hello:
     def GET(self):
-        return 'Hola pagina 1!'
+        return 'Hola estas en la super mega pagina 1!'
 
 class pagina2:
     def GET(self):
